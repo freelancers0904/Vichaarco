@@ -101,7 +101,7 @@ const Contact = () => {
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
                   <option value="" style={{ background: 'hsl(var(--bg-secondary))', color: 'hsl(var(--text-primary))' }}>Business Type</option>
-                  {['Gym', 'Fitness Center', 'Coaching Business', 'Local Service', 'Restaurant', 'Other'].map((o) => (
+                  {['Interior Designer','Gym', 'Fitness Center', 'Coaching Business', 'Local Service', 'Restaurant', 'Other'].map((o) => (
                     <option key={o} value={o} style={{ background: 'hsl(var(--bg-secondary))', color: 'hsl(var(--text-primary))' }}>{o}</option>
                   ))}
                 </select>

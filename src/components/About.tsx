@@ -31,13 +31,13 @@ const About = () => {
     {
       name: 'Mahesh Tolanur',
       role: 'Co-Founder & Lead Developer',
-      bio: 'Builds fast, responsive, and scalable websites that help businesses establish a strong digital presence.',
+      bio: 'Works closely with clients to understand their business goals and leads the development of modern, high-performing websites that help businesses establish a strong online presence.',
       photo: MTPhoto,
     },
     {
       name: 'Palak Shah',
       role: 'Co-Founder & Product Designer',
-      bio: 'Creates modern, user-friendly website designs that help businesses stand out online.',
+      bio: 'Manages project execution, client communication, and overall coordination while contributing to website development to ensure smooth and successful project delivery.',
       photo: PSPhoto,
     },
   ];
@@ -93,19 +93,18 @@ const About = () => {
               backgroundClip: 'text',
             }}
           >
-            The Minds Behind Every Project
+            The Team Behind Vichaar Co.
           </h2>
 
           <p
             className="font-body text-base sm:text-lg max-w-[600px] mx-auto"
             style={{ color: 'hsl(var(--text-secondary))' }}
           >
-            We founded Vichaar Co. with a shared mission: to empower Indian businesses with world-class digital presence.
-          </p>
+          Vichaar Co. was founded with a simple goal — helping businesses build a strong digital presence. As a team of developers and problem-solvers, we work closely with clients to create websites that are professional, modern, and built to support business growth. Every project we take on is driven by a commitment to quality, clear communication, and delivering real value to our clients.          </p>
         </div>
 
         {/* Founders Grid */}
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {founders.map((founder, index) => (
             <div
               key={index}
@@ -123,7 +122,7 @@ const About = () => {
                 {/* Photo Section */}
                 <div className="flex-shrink-0 w-full sm:w-48 flex justify-center sm:block">
                   <div
-                    className="relative w-34 h-42 sm:w-48 sm:h-56 rounded-xl overflow-hidden"
+                    className="relative w-32 h-40 sm:w-40 sm:h-48 overflow-hidden rounded-lg"
                     style={{
                       border: '2px solid rgba(201,168,76,0.25)',
                       boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
@@ -169,17 +168,17 @@ const About = () => {
                         Expertise
                       </p>
                       <p className="font-body text-xs text-agency-text-muted">
-                        {index === 0 ? 'Performance & Optimization' : 'User Experience Design'}
+                        {index === 0 ? 'Website Development & Technical Strategy' : 'Project Coordination & Website Development'}
                       </p>
                     </div>
-                    <div>
+                    {/* <div>
                       <p className="font-body font-semibold text-sm" style={{ color: '#C9A84C' }}>
                         Mission
                       </p>
                       <p className="font-body text-xs text-agency-text-muted">
                         {index === 0 ? 'Building Reliable Web Solutions' : 'Designing Better User Experiences'}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
