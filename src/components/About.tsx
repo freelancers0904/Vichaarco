@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import MTPhoto from '../assets/MT.jpg';
+import PSPhoto from '../assets/PS.jpg';
 
 const About = () => {
   const [loaded, setLoaded] = useState(false);
@@ -30,13 +32,13 @@ const About = () => {
       name: 'Mahesh Tolanur',
       role: 'Co-Founder & Lead Developer',
       bio: 'Builds fast, responsive, and scalable websites that help businesses establish a strong digital presence.',
-      photo: 'src/assets/MT.jpg',
+      photo: MTPhoto,
     },
     {
       name: 'Palak Shah',
       role: 'Co-Founder & Product Designer',
       bio: 'Creates modern, user-friendly website designs that help businesses stand out online.',
-      photo: 'src/assets/PS.jpg',
+      photo: PSPhoto,
     },
   ];
 
