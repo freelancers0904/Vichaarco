@@ -85,7 +85,7 @@ const Hero = () => {
             </span>
           ))}
           <span className={`block relative inline-block transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-            style={{ transitionDelay: '0.6s' }}
+            style={{ transitionDelay: '0.6s', marginLeft: '0.6em' }}
           >
              <span className="text-shimmer-gold">A Customer Magnet.</span>
             <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none">
