@@ -4,6 +4,7 @@ import vichaarLogo from '@/assets/vichaar-logo-transparent.png';
 import vichaarLogoLight from '@/assets/vichaar-logo-light-mode.png';
 
 const navLinks = [
+  { label: 'About Us', href: '#about' },
   { label: 'Solutions', href: '#solutions' },
   { label: 'Work', href: '#portfolio' },
   // { label: 'Pricing', href: '#pricing' },

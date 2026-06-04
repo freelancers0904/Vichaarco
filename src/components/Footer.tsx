@@ -76,7 +76,7 @@ const Footer = () => {
             >
               WhatsApp →
             </button>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=freelancers0904@gmail.com" target="_blank" rel="noopener noreferrer" className="block font-body text-xs md:text-[13px] text-agency-text-secondary hover:text-agency-text transition-colors">freelancers0904@gmail.com</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vichaarco0904@gmail.com" target="_blank" rel="noopener noreferrer" className="block font-body text-xs md:text-[13px] text-agency-text-secondary hover:text-agency-text transition-colors">vichaarco0904@gmail.com</a>
           </div>
         </div>
 

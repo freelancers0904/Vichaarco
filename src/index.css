@@ -153,7 +153,7 @@ html {
   h6 {
     font-family: "Clash Display", sans-serif;
     font-feature-settings: "ss01", "cv11";
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 }
 
@@ -161,17 +161,17 @@ html {
   .text-fluid-h1 {
     font-size: clamp(28px, 6.4vw, 76px);
     line-height: 1.08;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
   }
   .text-fluid-h2 {
     font-size: clamp(28px, 4.4vw, 56px);
     line-height: 1.15;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
   }
   .text-fluid-h3 {
     font-size: clamp(22px, 2.6vw, 40px);
     line-height: 1.2;
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
   }
   .text-fluid-body {
     font-size: clamp(14px, 1.1vw, 17px);
@@ -181,7 +181,6 @@ html {
     font-variant-numeric: tabular-nums;
   }
 }
-
 
 /* Grain texture overlay */
 body::before {
@@ -594,17 +593,21 @@ body {
 
 /* Premium polish — Batch A */
 @keyframes shimmer-sweep {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 .text-shimmer-gold {
   background: linear-gradient(
     90deg,
-    #C9A84C 0%,
-    #C9A84C 38%,
-    #F4DC9A 50%,
-    #C9A84C 62%,
-    #C9A84C 100%
+    #c9a84c 0%,
+    #c9a84c 38%,
+    #f4dc9a 50%,
+    #c9a84c 62%,
+    #c9a84c 100%
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -614,17 +617,23 @@ body {
   animation: shimmer-sweep 6s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  .text-shimmer-gold { animation: none; }
+  .text-shimmer-gold {
+    animation: none;
+  }
 }
 
 /* Hover-tilt frame */
 .tilt-frame {
   transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
 }
 @media (prefers-reduced-motion: reduce) {
-  .tilt-frame { transform: none !important; }
+  .tilt-frame {
+    transform: none !important;
+  }
 }
 
 /* Sticky portfolio tabs */

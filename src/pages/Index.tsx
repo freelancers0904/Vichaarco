@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 // import WhoThisIsFor from '@/components/WhoThisIsFor';
 import Stats from '@/components/Stats';
+import About from '@/components/About';
 import Solutions from '@/components/Solutions';
 import WhyUs from '@/components/WhyUs';
 // import AIFeatures from '@/components/AIFeatures';
@@ -28,6 +29,7 @@ const Index = () => {
       <Hero />
       {/* <WhoThisIsFor /> */}
       <Stats />
+      <About />
       <Solutions />
       <WhyUs />
       {/* <AIFeatures /> */}

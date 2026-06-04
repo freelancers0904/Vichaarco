@@ -1,2 +1,2 @@
 /** Inbox for contact form submissions (Web3Forms / FormSubmit). */
-export const CONTACT_EMAIL = 'freelancers0904@gmail.com';
+export const CONTACT_EMAIL = 'vichaarco0904@gmail.com';

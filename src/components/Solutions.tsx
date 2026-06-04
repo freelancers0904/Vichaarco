@@ -49,7 +49,7 @@ const Solutions = () => {
         <div className="text-center scroll-hidden">
           <span className="section-label">WHAT WE DO</span>
         </div>
-        <h2 className="scroll-hidden font-display font-bold text-[22px] sm:text-[30px] md:text-[48px] text-center mt-6 max-w-[880px] mx-auto px-2 leading-[1.2] tracking-[-0.02em]" style={{ wordSpacing: '0.15em' }}>
+        <h2 className="scroll-hidden font-display font-bold text-[22px] sm:text-[30px] md:text-[48px] text-center mt-6 max-w-[880px] mx-auto px-2 leading-[1.2] tracking-normal" style={{ wordSpacing: '0.15em' }}>
           <span className="block text-agency-text whitespace-normal sm:whitespace-nowrap">More than a website.</span>
           <span className="block text-agency-text whitespace-normal sm:whitespace-nowrap">A premium system that</span> 
           <span className="block mt-2 whitespace-normal sm:whitespace-nowrap" style={{ color: '#C9A84C' }}>brings customers.</span>

@@ -35,7 +35,7 @@ const FAQ = () => {
       <div ref={sectionRef} className="max-w-6xl mx-auto px-6">
         <div className="text-center mx-auto max-w-3xl">
           <span className="scroll-hidden section-label">FREQUENTLY ASKED QUESTIONS</span>
-          <h2 className="scroll-hidden font-display font-bold text-[28px] sm:text-[36px] md:text-[52px] text-center mt-6 leading-[1.1] tracking-[-0.02em] text-agency-text">
+          <h2 className="scroll-hidden font-display font-bold text-[28px] sm:text-[36px] md:text-[52px] text-center mt-6 leading-[1.1] tracking-normal text-agency-text">
            Questions every business owner asks…
           </h2>
           <p className="scroll-hidden font-body text-sm sm:text-base text-agency-text-secondary mt-6 leading-[1.85]">

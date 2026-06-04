@@ -113,7 +113,7 @@ const WhyUs = () => {
       <div ref={sectionRef} className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-16 items-center">
         <div>
           <span className="scroll-hidden font-body font-semibold text-xs tracking-[2px] uppercase" style={{ color: '#C9A84C' }}>WHY US?</span>
-          <h2 className="scroll-hidden font-display font-bold text-[28px] sm:text-[36px] lg:text-[52px] leading-[1.2] tracking-[-0.02em] mt-4" style={{ wordSpacing: '0.10em' }}>
+          <h2 className="scroll-hidden font-display font-bold text-[28px] sm:text-[36px] lg:text-[52px] leading-[1.2] tracking-normal mt-4" style={{ wordSpacing: '0.10em' }}>
             <span className="text-agency-text">Other agencies build websites.</span><br />
             <span className="text-agency-text">We build your entire</span><br />
             <span className="relative" style={{ color: '#C9A84C' }}>
