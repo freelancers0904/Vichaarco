@@ -53,7 +53,7 @@ const FAQ = () => {
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#C9A84C]/15 text-[#C9A84C] font-bold text-lg">{index + 1}</span>
                 <h3 className="font-body font-semibold text-base sm:text-lg text-agency-text">{faq.question}</h3>
               </div>
-              <p className="font-body text-sm sm:text-base text-agency-text-secondary leading-[1.8] mt-2">
+              <p className="font-body text-sm sm:text-base text-agency-text-secondary leading-[1.8] mt-2 text-justify">
                 {faq.answer}
               </p>
             </div>

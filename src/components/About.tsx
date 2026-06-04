@@ -96,11 +96,6 @@ const About = () => {
             The Team Behind Vichaar Co.
           </h2>
 
-          <p
-            className="font-body text-base sm:text-lg max-w-[600px] mx-auto"
-            style={{ color: 'hsl(var(--text-secondary))' }}
-          >
-          Vichaar Co. was founded with a simple goal — helping businesses build a strong digital presence. As a team of developers and problem-solvers, we work closely with clients to create websites that are professional, modern, and built to support business growth. Every project we take on is driven by a commitment to quality, clear communication, and delivering real value to our clients.          </p>
         </div>
 
         {/* Founders Grid */}
@@ -155,7 +150,7 @@ const About = () => {
                   </p>
 
                   <p
-                    className="font-body text-base leading-relaxed mb-4"
+                    className="font-body text-base leading-relaxed mb-4 text-justify"
                     style={{ color: 'hsl(var(--text-secondary))' }}
                   >
                     {founder.bio}
@@ -206,8 +201,8 @@ const About = () => {
             >
               Our Story
             </h3>
-            <p className="font-body text-base leading-relaxed max-w-3xl" style={{ color: 'hsl(var(--text-secondary))' }}>
-              Vichaar Co. was started with a simple goal — helping businesses establish a professional online presence. As a small team of designers and developers, we work closely with clients to create websites that are modern, effective, and built for growth.
+            <p className="font-body text-base leading-relaxed max-w-3xl text-justify" style={{ color: 'hsl(var(--text-secondary))' }}>
+              Vichaar Co. was founded with a simple goal — helping businesses build a strong digital presence. As a team of developers and problem-solvers, we work closely with clients to create websites that are professional, modern, and built to support business growth. Every project we take on is driven by a commitment to quality, clear communication, and delivering real value to our clients.
             </p>
           </div>
         </div>
