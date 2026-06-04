@@ -153,7 +153,7 @@ const Contact = () => {
                       Chat with Palak: +91 86601 21462
                     </button>
                   </div>
-                  <p className="font-body text-xs text-agency-text-muted mt-1">We typically reply within 1 hr</p>
+                  <p className="font-body text-xs text-agency-text-muted mt-1">We typically reply within 30 minutes</p>
                   <button type="button" onClick={openWhatsAppPicker}
                     className="inline-block mt-3 px-4 py-2 rounded-lg font-body text-[13px] font-medium transition-all duration-300"
                     style={{ border: '1.5px solid rgba(37,211,102,0.4)', color: '#25D366' }}
