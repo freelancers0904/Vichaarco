@@ -201,7 +201,7 @@ const About = () => {
             >
               Our Story
             </h3>
-            <p className="font-body text-base leading-relaxed text-justify" style={{ color: 'hsl(var(--text-secondary))' }}>
+            <p className="font-body text-base leading-relaxed text-justify max-w-[68ch] mx-auto" style={{ color: 'hsl(var(--text-secondary))' }}>
               Vichaar Co. was founded with a simple goal — helping businesses build a strong digital presence. As a team of developers and problem-solvers, we work closely with clients to create websites that are professional, modern, and built to support business growth. Every project we take on is driven by a commitment to quality, clear communication, and delivering real value to our clients.
             </p>
           </div>

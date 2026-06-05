@@ -1,65 +1,63 @@
-## 1. Fix section background alternation
+# Attention-to-Detail Polish Pass
 
-After hiding Pricing, AIFeatures and others, several adjacent sections now share the same `--bg-secondary` color (WhyUs → Portfolio → Process → FAQ → Contact all secondary). Re-alternate so the rhythm reads cleanly in **both dark and light** modes.
+Goal: elevate perceived quality and user experience on our own portfolio site without disturbing existing layout, content, sections, colors, or copy. Every change is additive polish — nothing structural.
 
-New pattern (top → bottom):
+Guiding principle: a website-development agency's own site must *feel* premium in the first 3 seconds and reward attention on every interaction.
 
-| Section | Background |
-|---|---|
-| Hero | primary |
-| Stats | secondary |
-| Solutions | primary |
-| WhyUs | secondary |
-| Portfolio | **primary** (was secondary) |
-| Process | secondary |
-| FAQ | **primary** (was secondary) |
-| Contact | secondary |
+---
 
-Edit the inline `background: 'hsl(var(--bg-...))'` on `Portfolio.tsx` (section wrapper) and `FAQ.tsx`. Verify in both themes.
+## 1. Spacing, Rhythm & Typography (subtle, no layout shift)
 
-## 2. Splash / intro screen with logo + tagline
+- Normalize section vertical padding to one consistent scale across all sections (currently slightly mixed).
+- Tighten Clash Display heading line-height on mobile so big headlines feel sharper, not loose.
+- Cap paragraph max-width (~65ch) in About story & FAQ answers so long lines stay readable on wide screens.
+- Unify `.section-label` size/padding so every section's eyebrow label looks identical.
+- Tighten 1–2 oversized mobile gaps between Hero → Stats → About.
 
-Add a full-screen intro overlay shown once per session that fades out into the site:
+## 2. Micro-interactions & Feel (the "attention to details" layer)
 
-- New component `src/components/SplashScreen.tsx`.
-- Pure black background (matches reference).
-- Centered Vichaar Co logo (`vichaar-logo-transparent.png`) with tagline `WHERE IDEAS MEET TECHNOLOGY` in small gold tracked caps below it.
-- Subtle fade-in (logo) → 1.2s hold → fade-out + slight scale (whole overlay) using CSS keyframes.
-- Mounted in `Index.tsx`, controlled by state; sets `sessionStorage` flag so it only shows once per browser session (skip on internal navigation/refresh-spam).
-- `pointer-events: none` after fade so it never blocks clicks.
-- Respects `prefers-reduced-motion` (instant hide).
+- Consistent card hover: same lift + soft gold glow on every interactive card (Solutions, WhyUs, Portfolio, Founders, Pricing) — currently inconsistent.
+- Tactile button feedback: subtle `active:scale-[0.98]` on primary CTAs.
+- Polished keyboard focus rings (gold-tinted) on all interactive elements — accessibility + premium feel.
+- FAQ accordion: smoother chevron rotation, soft tint on the expanded item.
+- Nav link underline: consistent gold underline animation across all nav items.
+- Contact form submit: explicit loading + disabled visual state so it never feels frozen.
+- Smoother scroll-reveal stagger so sections don't all animate at once.
 
-## 3. Fix footer links
+## 3. Mobile Polish (where most visitors actually land)
 
-`src/components/Footer.tsx` currently has duplicate `Process` and is missing `Pricing`-removal cleanup. Replace the `navLinks` array with the correct, deduped set:
+- Hide-on-scroll navbar: hides on scroll down, returns on scroll up. Modern, more content-first.
+- Smoother mobile menu open/close transition (slide + fade) instead of abrupt toggle.
+- WhatsApp FAB: safe bottom padding + iOS `safe-area-inset` so it never overlaps footer or ScrollToTop.
+- Ensure FAQ triggers, nav items, footer links all meet 44px tap-target minimum.
+- Verify FAB + ScrollToTop don't visually collide on narrow viewports.
 
-```
-Work       → #portfolio
-Services   → #solutions
-Process    → #process
-FAQ        → #faq
-Contact    → #contact
-```
+---
 
-Note: the Solutions section uses `id="solutions"` but the nav reads "Services" — keep the label "Services" and point href to `#solutions` so it actually scrolls.
+## Safety guarantees
 
-## 4. SEO improvements (minimal, no city mention)
+- **No content changes.** Not a single word edited.
+- **No section added or removed.**
+- **No color palette change.** Uses existing tokens (`--accent-gold`, `--border`, etc.).
+- **No layout restructuring.** Grids, columns, hero composition stay identical.
+- **No new dependencies.** Pure CSS / Tailwind / existing patterns.
+- **Pure CSS animations only** (per project constraint).
+- Verified across 1440 / 1024 / 820 / 390 px after implementation.
 
-Update `index.html` head + add structured data:
+## Files likely touched (small, surgical edits)
 
-- **Title**: `Vichaar Co — Web Design & Development Studio`
-- **Meta description**: "Vichaar Co builds fast, conversion-focused websites for businesses. Custom design, development & SEO — delivered in 5–7 days."
-- **Canonical**: `<link rel="canonical" href="https://vichaar-co.lovable.app/" />`
-- **Keywords-relevant og/twitter** title + description matching above.
-- **JSON-LD Organization schema** (name, url, logo, contact, sameAs links if available).
-- **JSON-LD WebSite schema** with name + url.
-- Add `lang="en-IN"` on `<html>`.
-- Update `public/robots.txt` with Sitemap directive and create `public/sitemap.xml` with the single `/` route.
-- Ensure Hero `<h1>` is the only H1 (quick audit; adjust if duplicate found).
+- `src/index.css` — focus rings, accordion polish, spacing utilities
+- `src/components/Navbar.tsx` — hide-on-scroll, mobile menu transition
+- `src/components/WhatsAppFAB.tsx`, `ScrollToTop.tsx` — safe-area, stacking
+- `src/components/FAQ.tsx` — accordion polish, line-length cap
+- `src/components/About.tsx` — line-length cap, mobile spacing
+- `src/components/Hero.tsx`, `Stats.tsx` — mobile gap tightening
+- `src/components/Solutions.tsx`, `WhyUs.tsx`, `Portfolio.tsx` — hover consistency
+- `src/components/Contact.tsx` — button states, focus rings
 
-## Technical details
+## Out of scope (will NOT touch)
 
-- Files edited: `src/components/Portfolio.tsx`, `src/components/FAQ.tsx`, `src/components/Footer.tsx`, `src/pages/Index.tsx`, `index.html`, `public/robots.txt`.
-- Files created: `src/components/SplashScreen.tsx`, `public/sitemap.xml`.
-- No new dependencies. Pure CSS animations only (per project memory).
-- All colors via existing semantic tokens — no new color values.
+- Copy, headings, founder bios, pricing tiers, portfolio entries
+- Section order, presence, or composition
+- Brand colors, fonts, logo
+- Backend, forms logic, integrations
