@@ -201,7 +201,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-[999] flex flex-col items-center justify-center gap-5 px-6 py-16 text-center"
+          className="fixed inset-0 z-[999] flex flex-col items-center justify-center gap-5 px-6 py-16 text-center animate-fade-in"
           style={{
             background: isLight ? 'rgba(245,242,238,0.98)' : 'rgba(0,16,32,0.98)',
             backdropFilter: 'blur(22px)',
