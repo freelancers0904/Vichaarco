@@ -4,10 +4,12 @@ const WhatsAppFAB = () => {
       href="https://wa.me/917499289391"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed right-6 bottom-6 z-[9997] w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110"
+      aria-label="Chat with us on WhatsApp"
+      className="fixed right-6 z-[9997] w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-300 hover:scale-110 active:scale-95"
       style={{
         background: '#25D366',
         boxShadow: '0 4px 20px rgba(37,211,102,0.4)',
+        bottom: 'calc(1.5rem + env(safe-area-inset-bottom, 0px))',
       }}
     >
       {/* Pulse ring */}
