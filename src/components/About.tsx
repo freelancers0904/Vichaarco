@@ -80,7 +80,7 @@ const About = () => {
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: '#C9A84C' }} />
             <span className="font-body font-medium text-[13px]" style={{ color: '#C9A84C' }}>
-              👥 The People Behind Vichaar Co.
+              👥 Meet the Founders
             </span>
           </div>
 
@@ -137,13 +137,13 @@ const About = () => {
                 {/* Content Section */}
                 <div className="flex-1 flex flex-col justify-start">
                   <h3
-                    className="font-display font-bold text-2xl mb-1"
+                    className="font-display font-bold text-2xl mb-1 text-center sm:text-left"
                     style={{ color: '#C9A84C' }}
                   >
                     {founder.name}
                   </h3>
                   <p
-                    className="font-body font-semibold text-sm mb-4"
+                    className="font-body font-semibold text-sm mb-4 text-center sm:text-left"
                     style={{ color: 'hsl(var(--text-secondary))' }}
                   >
                     {founder.role}
