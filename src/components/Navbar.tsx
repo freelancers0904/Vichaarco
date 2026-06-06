@@ -67,7 +67,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-[1000] h-[68px] flex items-center transition-all duration-300 will-change-transform"
+        className="fixed top-0 left-0 right-0 z-[1000] h-[68px] flex items-center transition-all duration-300"
         style={{
           background: scrolled
             ? (isLight ? 'rgba(245,242,238,0.92)' : 'rgba(0,16,32,0.9)')
@@ -76,7 +76,6 @@ const Navbar = () => {
           borderBottom: scrolled
             ? `1px solid rgba(149,124,61,${isLight ? '0.2' : '0.15'})`
             : '1px solid transparent',
-          transform: hidden && !menuOpen ? 'translateY(-100%)' : 'translateY(0)',
         }}
       >
         <div className="relative max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
