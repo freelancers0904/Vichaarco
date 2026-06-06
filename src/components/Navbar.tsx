@@ -41,16 +41,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    let lastY = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 60);
-      // Hide on scroll-down past threshold, show on scroll-up. Always show near top or when menu open.
-      const delta = y - lastY;
-      if (y < 120) setHidden(false);
-      else if (delta > 6) setHidden(true);
-      else if (delta < -6) setHidden(false);
-      lastY = y;
 
       const sections = navLinks.map(l => l.href.slice(1));
       for (let i = sections.length - 1; i >= 0; i--) {
