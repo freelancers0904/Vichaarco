@@ -15,7 +15,6 @@ const navLinks = [
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isLight, setIsLight] = useState(false);
@@ -42,16 +41,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    let lastY = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 60);
-      // Hide on scroll-down past threshold, show on scroll-up. Always show near top or when menu open.
-      const delta = y - lastY;
-      if (y < 120) setHidden(false);
-      else if (delta > 6) setHidden(true);
-      else if (delta < -6) setHidden(false);
-      lastY = y;
 
       const sections = navLinks.map(l => l.href.slice(1));
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -75,7 +67,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-[1000] h-[68px] flex items-center transition-all duration-300 will-change-transform"
+        className="fixed top-0 left-0 right-0 z-[1000] h-[68px] flex items-center transition-all duration-300"
         style={{
           background: scrolled
             ? (isLight ? 'rgba(245,242,238,0.92)' : 'rgba(0,16,32,0.9)')
@@ -84,7 +76,6 @@ const Navbar = () => {
           borderBottom: scrolled
             ? `1px solid rgba(149,124,61,${isLight ? '0.2' : '0.15'})`
             : '1px solid transparent',
-          transform: hidden && !menuOpen ? 'translateY(-100%)' : 'translateY(0)',
         }}
       >
         <div className="relative max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
