@@ -194,6 +194,8 @@ body::before {
   pointer-events: none;
   z-index: 9998;
   opacity: 0.4;
+  transform: translateZ(0);
+  will-change: auto;
 }
 
 .light-mode body::before {
