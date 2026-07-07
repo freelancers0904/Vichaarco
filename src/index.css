@@ -4,9 +4,14 @@
 
 /* Performance optimizations */
 html {
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-gutter: stable;
+  overscroll-behavior-y: none;
+}
+body {
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 @layer base {
@@ -114,9 +119,7 @@ html {
     @apply border-border;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  /* Native inertial scroll — smooth-behavior removed for buttery feel */
 
   body {
     @apply bg-background text-foreground;
@@ -191,6 +194,8 @@ body::before {
   pointer-events: none;
   z-index: 9998;
   opacity: 0.4;
+  transform: translateZ(0);
+  will-change: auto;
 }
 
 .light-mode body::before {
@@ -539,15 +544,15 @@ body::before {
   --text-secondary: 210 30% 28%;
 }
 
-/* Ensure scrollbar doesn't break layout */
+/* Layout stability without forced scrollbar gutter */
 html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
-/* Performance optimizations */
-section {
-  contain: layout style paint;
+/* Skip painting offscreen sections for buttery long-page scroll */
+section:not(.hero-section) {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
 }
 
 /* Reduce repaints on animations */
@@ -577,6 +582,7 @@ img {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* Reduce jank on transitions */
