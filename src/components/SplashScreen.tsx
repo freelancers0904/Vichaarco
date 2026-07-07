@@ -48,7 +48,7 @@ const SplashScreen = () => {
           alignItems: 'center',
           justifyContent: 'center',
           opacity: fade ? 0 : 1,
-          transition: 'opacity 0.8s ease-out',
+          transition: 'opacity 0.4s ease-out',
           pointerEvents: 'none',
         }}
       >
