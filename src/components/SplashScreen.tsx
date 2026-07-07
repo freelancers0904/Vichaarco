@@ -16,14 +16,14 @@ const SplashScreen = () => {
     document.body.style.overflow = 'hidden';
     document.documentElement.style.scrollBehavior = 'auto';
     
-    // Hold for 3 seconds, then fade out over 0.8s
-    const t1 = window.setTimeout(() => setFade(true), 3000);
+    // Hold briefly, then fade out fast
+    const t1 = window.setTimeout(() => setFade(true), 900);
     const t2 = window.setTimeout(() => {
       setShow(false);
       sessionStorage.setItem(STORAGE_KEY, '1');
       document.body.style.overflow = '';
       document.documentElement.style.scrollBehavior = '';
-    }, 3800);
+    }, 1300);
     
     return () => {
       clearTimeout(t1);
