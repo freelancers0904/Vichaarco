@@ -73,7 +73,7 @@ const SplashScreen = () => {
           height: 'clamp(60px, 10vw, 100px)',
           width: 'auto',
           opacity: fade ? 0 : 1,
-          transition: 'opacity 0.8s ease-out 0.1s',
+          transition: 'opacity 0.4s ease-out',
           position: 'relative',
           zIndex: 1,
           filter: 'drop-shadow(0 0 40px rgba(201,168,76,0.4))',
