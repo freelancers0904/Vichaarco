@@ -542,15 +542,15 @@ body::before {
   --text-secondary: 210 30% 28%;
 }
 
-/* Ensure scrollbar doesn't break layout */
+/* Layout stability without forced scrollbar gutter */
 html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
-/* Performance optimizations */
-section {
-  contain: layout style paint;
+/* Skip painting offscreen sections for buttery long-page scroll */
+section:not(.hero-section) {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
 }
 
 /* Reduce repaints on animations */
