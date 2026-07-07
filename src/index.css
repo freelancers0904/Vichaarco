@@ -119,9 +119,7 @@ body {
     @apply border-border;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  /* Native inertial scroll — smooth-behavior removed for buttery feel */
 
   body {
     @apply bg-background text-foreground;
