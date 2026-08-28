@@ -96,12 +96,13 @@ type Project = {
   browserUrl: string;
 };
 
-type Category = 'interior' | 'restaurant' | 'gym';
+type Category = 'interior' | 'restaurant' | 'gym' | 'wedding';
 
 const categories: { id: Category; label: string }[] = [
   { id: 'interior', label: 'Interior Design' },
   { id: 'restaurant', label: 'Restaurant' },
   { id: 'gym', label: 'Gym & Fitness' },
+  { id: 'wedding', label: 'Wedding & Events' },
 ];
 
 const projectsByCategory: Record<Category, Project[]> = {
@@ -169,6 +170,18 @@ const projectsByCategory: Record<Category, Project[]> = {
       bestFor: 'Fitness Brands, Personal Trainers, Gyms',
       liveUrl: 'https://gym-demo-web-9n2c.vercel.app/',
       browserUrl: 'gym-demo-web-9n2c.vercel.app',
+    },
+  ],
+  wedding: [
+    {
+      tag: 'DEMO PROJECT · WEDDING & EVENTS',
+      name: 'Wedding Visuals',
+      location: '📍 Wedding Planning & Event Management',
+      tags: ['Elegant Visual Design', 'Event Gallery', 'Package Showcase', 'Enquiry Form', 'Mobile-First'],
+      desc: 'An elegant wedding planning website built to showcase real events, packages and visuals — designed to turn browsing couples into booked consultations.',
+      bestFor: 'Wedding Planners, Event Managers, Decorators',
+      liveUrl: 'https://wedding-visuals-ten.vercel.app/',
+      browserUrl: 'wedding-visuals-ten.vercel.app',
     },
   ],
 };
