@@ -174,7 +174,7 @@ const Navbar = () => {
                 t.style.boxShadow = 'none';
               }}
             >
-              Let's Talk →
+              Chat on WhatsApp →
             </button>
 
             {/* Hamburger */}

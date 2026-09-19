@@ -77,7 +77,7 @@ const BrowserFrame = ({ url, src, title }: { url: string; src: string; title: st
 };
 
 const ScorePills = () => (
-  <div className="flex flex-wrap gap-1.5 mt-3">
+  <div className="flex flex-wrap gap-2.5 mt-4">
     <span className="score-pill"><span>98</span> Performance</span>
     <span className="score-pill"><span>100</span> SEO</span>
     <span className="score-pill"><span>100</span> Accessibility</span>
@@ -197,7 +197,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-28 md:py-32" style={{ background: 'hsl(var(--bg-primary))' }}>
       <div ref={sectionRef} className="max-w-[1100px] mx-auto px-6">
         <div className="text-center">
-          <span className="scroll-hidden section-label">OUR WORK</span>
+          <span className="scroll-hidden section-label mx-auto">OUR WORK</span>
           <h2 className="scroll-hidden font-display font-bold text-fluid-h2 text-center mt-6 text-agency-text" style={{ wordSpacing: '0.04em' }}>
             Built by us.<br />Ready to inspire you.
           </h2>
@@ -223,7 +223,7 @@ const Portfolio = () => {
                           background: 'linear-gradient(135deg, #957C3D, #C9A84C)',
                           color: '#001020',
                           border: '1.5px solid transparent',
-                          boxShadow: '0 0 20px rgba(201,168,76,0.3)',
+                          boxShadow: '0 4px 12px rgba(201,168,76,0.2)',
                         }
                       : {
                           background: 'hsla(var(--card-bg), 0.35)',
@@ -259,7 +259,7 @@ const Portfolio = () => {
                   <p className="font-body text-xs sm:text-sm text-agency-text-secondary mt-1">{p.location}</p>
                   <ScorePills />
 
-                  <div className="flex flex-wrap gap-2 mt-4 sm:mt-5">
+                  <div className="flex flex-wrap gap-3 mt-5">
                     {p.tags.map((tag) => (
                       <span key={tag} className="px-2 sm:px-3 py-1 rounded-full font-body text-[10px] sm:text-xs" style={{
                         background: 'hsla(var(--card-bg),0.35)',
@@ -272,7 +272,7 @@ const Portfolio = () => {
                     ))}
                   </div>
 
-                  <p className="font-body text-[13px] sm:text-[15px] text-agency-text-secondary leading-[1.7] mt-4 sm:mt-5 text-justify">{p.desc}</p>
+                  <p className="font-body text-[13px] sm:text-[15px] text-agency-text-secondary leading-[1.7] mt-4 sm:mt-5 text-left">{p.desc}</p>
 
                   <p className="font-body text-[13px] sm:text-[15px] text-agency-text-secondary leading-[1.7] mt-2">
                     <strong>Best for:</strong> {p.bestFor}

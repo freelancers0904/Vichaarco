@@ -38,7 +38,7 @@ const Footer = () => {
                 src={vichaarLogo}
                 alt="Vichaar Co"
                 decoding="sync"
-                className="h-14 md:h-16 w-auto block transition-opacity duration-75"
+                className="h-10 md:h-12 w-auto block transition-opacity duration-75"
                 style={{ opacity: isLight ? 0 : 1 }}
               />
               <img
@@ -46,7 +46,7 @@ const Footer = () => {
                 alt=""
                 aria-hidden="true"
                 decoding="sync"
-                className="h-14 md:h-16 w-auto block absolute inset-0 transition-opacity duration-75"
+                className="h-10 md:h-12 w-auto block absolute inset-0 transition-opacity duration-75"
                 style={{ opacity: isLight ? 1 : 0 }}
               />
             </a>
@@ -72,9 +72,9 @@ const Footer = () => {
             <p className="font-body font-medium text-[10px] md:text-[11px] tracking-[1.5px] text-agency-text-muted uppercase mb-4">Get in touch</p>
             <button onClick={() => setWhatsappOpen(true)}
               className="inline-block w-full sm:w-auto px-3 md:px-4 py-2 rounded-lg font-body text-xs md:text-[13px] font-medium mb-3 transition-all duration-300"
-              style={{ border: '1.5px solid rgba(37,211,102,0.4)', color: '#25D366' }}
+              style={{ border: '1.5px solid rgba(201,168,76,0.4)', color: '#C9A84C' }}
             >
-              WhatsApp →
+              Chat on WhatsApp →
             </button>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vichaarco0904@gmail.com" target="_blank" rel="noopener noreferrer" className="block font-body text-xs md:text-[13px] text-agency-text-secondary hover:text-agency-text transition-colors">vichaarco0904@gmail.com</a>
           </div>

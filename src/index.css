@@ -659,8 +659,8 @@ body {
 .score-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
+  gap: 8px;
+  padding: 5px 12px;
   border-radius: 999px;
   font-family: "Inter", sans-serif;
   font-size: 11px;

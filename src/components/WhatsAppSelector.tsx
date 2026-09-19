@@ -70,7 +70,7 @@ const WhatsAppSelector = ({
         </div>
 
         {/* Content */}
-        <div className="px-8 py-6 space-y-3">
+        <div className="px-8 py-6 space-y-4">
           {hasPrefill && (
             <a
               href={mailtoHref}
