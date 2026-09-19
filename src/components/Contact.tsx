@@ -20,7 +20,7 @@ function buildContactEnquiry(fullName: string, businessType: string, email: stri
 const inputStyle = {
   background: 'hsla(var(--card-bg), var(--card-bg-alpha))',
   border: '1px solid rgba(149,124,61,0.2)',
-  borderRadius: 10,
+  borderRadius: 12,
   padding: '14px 18px',
   color: 'hsl(var(--text-primary))',
   width: '100%',
@@ -118,8 +118,8 @@ const Contact = () => {
                     {submitError}
                   </p>
                 )}
-                <button type="submit" disabled={submitting} className="w-full h-[52px] rounded-[10px] font-body font-semibold text-[15px] transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
-                  style={{ background: 'linear-gradient(135deg, #957C3D, #C9A84C)', color: '#001020', boxShadow: '0 0 30px rgba(201,168,76,0.25)' }}
+                <button type="submit" disabled={submitting} className="btn-gold w-full h-[52px] text-[15px] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                  
                 >
                   {submitting ? 'Sending…' : 'Send Message →'}
                 </button>
@@ -155,7 +155,7 @@ const Contact = () => {
                   </div>
                   <p className="font-body text-xs text-agency-text-muted mt-1">We typically reply within 30 minutes</p>
                   <button type="button" onClick={openWhatsAppPicker}
-                    className="inline-block mt-3 px-4 py-2 rounded-lg font-body text-[13px] font-medium transition-all duration-300"
+                    className="inline-block mt-3 px-4 py-2 rounded-lg font-body text-sm font-medium transition-all duration-300"
                     style={{ border: '1.5px solid rgba(37,211,102,0.4)', color: '#25D366' }}
                   >
                     Open WhatsApp →
@@ -177,7 +177,7 @@ const Contact = () => {
                   <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_EMAIL)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-3 px-4 py-2 rounded-lg font-body text-[13px] font-medium transition-all duration-300"
+                    className="inline-block mt-3 px-4 py-2 rounded-lg font-body text-sm font-medium transition-all duration-300"
                     style={{ border: '1.5px solid rgba(201,168,76,0.4)', color: '#C9A84C' }}
                   >
                     Send Email →

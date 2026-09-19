@@ -123,12 +123,8 @@ const Hero = () => {
         >
           <MagneticButton
             onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-            className="font-body font-semibold text-[14px] sm:text-[15px] h-11 sm:h-[52px] px-6 sm:px-8 rounded-[10px] w-full sm:w-auto flex items-center justify-center gap-2"
-            style={{
-              background: 'linear-gradient(135deg, #957C3D, #C9A84C)',
-              color: '#001020',
-              boxShadow: '0 0 30px rgba(201,168,76,0.25)',
-            }}
+            className="btn-gold h-12 sm:h-[52px] px-6 sm:px-8 w-full sm:w-auto text-[15px]"
+            
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -138,7 +134,7 @@ const Hero = () => {
           </MagneticButton>
           <button
             onClick={() => setWhatsappOpen(true)}
-            className="font-body font-semibold text-[14px] sm:text-[15px] h-11 sm:h-[52px] px-6 sm:px-8 rounded-[10px] flex items-center justify-center transition-all duration-300 hover:bg-[rgba(201,168,76,0.08)] w-full sm:w-auto gap-2"
+            className="btn-gold-outline h-12 sm:h-[52px] px-6 sm:px-8 w-full sm:w-auto text-[15px]"
             style={{
               border: '1px solid rgba(201,168,76,0.3)',
               color: '#C9A84C',
