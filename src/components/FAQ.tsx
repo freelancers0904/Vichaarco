@@ -29,7 +29,10 @@ const faqs = [
 
 const FAQ = () => {
   const sectionRef = useScrollAnimation();
+  const [whatsappOpen, setWhatsappOpen] = useState(false);
 
+  import { useState } from "react";
+  import WhatsAppSelector from "./WhatsAppSelector";
   return (
     <section id="faq" className="py-28 md:py-32" style={{ background: 'hsl(var(--bg-primary))' }}>
       <div ref={sectionRef} className="max-w-6xl mx-auto px-6">
@@ -58,6 +61,9 @@ const FAQ = () => {
               </p>
             </div>
           ))}
+        </div>
+        <div className="scroll-hidden flex flex-col items-center mt-16">
+          <button onClick={() => setWhatsappOpen(true)} className="font-body font-semibold text-sm sm:text-base px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-1" style={{ background: "linear-gradient(135deg, #957C3D, #C9A84C)", color: "#001020", boxShadow: "0 10px 30px rgba(201,168,76,0.2)" }}>Still have questions? Chat on WhatsApp →</button>
         </div>
       </div>
     </section>

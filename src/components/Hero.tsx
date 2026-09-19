@@ -140,7 +140,7 @@ const Hero = () => {
             onClick={() => setWhatsappOpen(true)}
             className="font-body font-semibold text-[14px] sm:text-[15px] h-11 sm:h-[52px] px-6 sm:px-8 rounded-[10px] flex items-center justify-center transition-all duration-300 hover:bg-[rgba(201,168,76,0.08)] w-full sm:w-auto gap-2"
             style={{
-              border: '1.5px solid rgba(201,168,76,0.5)',
+              border: '1px solid rgba(201,168,76,0.3)',
               color: '#C9A84C',
             }}
           >
