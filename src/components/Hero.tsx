@@ -69,7 +69,7 @@ const Hero = () => {
           }}
         >
           <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: '#C9A84C' }} />
-          <span className="font-body font-medium text-[13px]" style={{ color: '#C9A84C' }}>⚡ Full Online Presence in 5–7 Days</span>
+          <span className="font-body font-medium text-sm" style={{ color: '#C9A84C' }}>⚡ Full Online Presence in 5–7 Days</span>
         </div>
 
         {/* Headline */}
@@ -88,7 +88,7 @@ const Hero = () => {
             style={{ transitionDelay: '0.6s', marginLeft: '0.9em', whiteSpace: 'nowrap' }}
           >
              <span className="text-shimmer-gold">A Customer Magnet.</span>
-            <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none">
+            <svg className="absolute -bottom-3 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none">
               <path
                 d="M2 8 C40 2, 80 12, 120 6 S180 2, 198 8"
                 stroke="#C9A84C"
@@ -152,7 +152,7 @@ const Hero = () => {
         </div>
 
         {/* Microcopy */}
-        <p className={`font-body text-[13px] text-agency-text-muted mt-5 transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        <p className={`font-body text-sm text-agency-text-muted mt-5 transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
           style={{ transitionDelay: '0.9s' }}
         >
           No retainer. No tech headaches. Just customers finding you.
