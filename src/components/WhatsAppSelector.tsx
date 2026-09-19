@@ -43,7 +43,7 @@ const WhatsAppSelector = ({
       />
 
       {/* Modal */}
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1999] w-[90vw] max-w-sm rounded-2xl shadow-2xl"
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1999] w-[90vw] max-w-sm rounded-card shadow-2xl"
         style={{
           background: 'hsl(var(--background))',
           border: '1px solid rgba(149,124,61,0.2)',
@@ -75,7 +75,7 @@ const WhatsAppSelector = ({
             <a
               href={mailtoHref}
               onClick={handleChannelClick}
-              className="w-full p-4 rounded-xl transition-all duration-300 flex items-center gap-4 group"
+              className="w-full p-4 rounded-item transition-all duration-300 flex items-center gap-4 group"
               style={{
                 background: 'hsl(var(--card), 0.5)',
                 border: '1.5px solid rgba(201,168,76,0.35)',
@@ -117,7 +117,7 @@ const WhatsAppSelector = ({
               target="_blank"
               rel="noopener noreferrer"
               onClick={hasPrefill ? handleChannelClick : onClose}
-              className="w-full p-4 rounded-xl transition-all duration-300 flex items-center gap-4 group"
+              className="w-full p-4 rounded-item transition-all duration-300 flex items-center gap-4 group"
               style={{
                 background: 'hsl(var(--card), 0.5)',
                 border: '1.5px solid rgba(201,168,76,0.2)',

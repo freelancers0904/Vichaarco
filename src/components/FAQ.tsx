@@ -50,10 +50,10 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={faq.question}
-              className="scroll-hidden rounded-[24px] border border-[rgba(201,168,76,0.18)] bg-[rgba(255,255,255,0.04)] p-6 sm:p-8 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.55)] transition-transform duration-300 hover:-translate-y-1"
+              className="scroll-hidden rounded-card border border-[rgba(201,168,76,0.18)] bg-[rgba(255,255,255,0.04)] p-6 sm:p-8 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.55)] transition-transform duration-300 hover:-translate-y-1"
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#C9A84C]/15 text-[#C9A84C] font-bold text-lg">{index + 1}</span>
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-item bg-[#C9A84C]/15 text-[#C9A84C] font-bold text-lg">{index + 1}</span>
                 <h3 className="font-body font-semibold text-base sm:text-lg text-agency-text">{faq.question}</h3>
               </div>
               <p className="font-body text-sm sm:text-base text-agency-text-secondary leading-[1.8] mt-2 text-left">
@@ -66,7 +66,7 @@ const FAQ = () => {
         <div className="scroll-hidden flex flex-col items-center mt-16">
           <button
             onClick={() => setWhatsappOpen(true)}
-            className="font-body font-semibold text-sm sm:text-base px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-1"
+            className="btn-gold px-8 py-4"
             style={{
               background: 'linear-gradient(135deg, #957C3D, #C9A84C)',
               color: '#001020',

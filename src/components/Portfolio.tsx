@@ -28,7 +28,7 @@ const BrowserFrame = ({ url, src, title }: { url: string; src: string; title: st
       ref={ref}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
-      className="animate-float tilt-frame rounded-xl overflow-hidden group relative"
+      className="animate-float tilt-frame rounded-item overflow-hidden group relative"
       style={{
         background: 'hsl(var(--bg-primary))',
         border: '1px solid rgba(149,124,61,0.2)',
@@ -242,18 +242,18 @@ const Portfolio = () => {
         {projects.map((p, i) => {
           const reversed = i % 2 === 1;
           return (
-            <div key={`${activeCategory}-${i}`} className="mt-10 rounded-3xl p-6 md:p-8 lg:p-12 overflow-hidden animate-fade-slide-up" style={{
+            <div key={`${activeCategory}-${i}`} className="mt-10 rounded-card p-6 md:p-8 lg:p-12 overflow-hidden animate-fade-slide-up" style={{
               background: `hsla(var(--card-bg), var(--card-bg-alpha))`,
               border: '1px solid rgba(149,124,61,0.2)',
             }}>
               <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center ${reversed ? 'md:grid-flow-dense' : ''}`}>
                 <div className={reversed ? 'md:col-start-2' : ''}>
-                  <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold tracking-[1px] font-body" style={{
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider capitalize font-body" style={{
                     background: 'rgba(201,168,76,0.1)',
                     border: '1px solid rgba(201,168,76,0.25)',
                     color: '#C9A84C',
                   }}>
-                    {p.tag}
+                    {p.tag.toLowerCase()}
                   </span>
                   <h3 className="font-display font-bold text-fluid-h3 text-agency-text mt-4">{p.name}</h3>
                   <p className="font-body text-xs sm:text-sm text-agency-text-secondary mt-1">{p.location}</p>
@@ -261,7 +261,7 @@ const Portfolio = () => {
 
                   <div className="flex flex-wrap gap-3 mt-5">
                     {p.tags.map((tag) => (
-                      <span key={tag} className="px-2 sm:px-3 py-1 rounded-full font-body text-[10px] sm:text-xs" style={{
+                      <span key={tag} className="px-2 sm:px-3 py-1 rounded-full font-body text-xs" style={{
                         background: 'hsla(var(--card-bg),0.35)',
                         border: '1px solid rgba(149,124,61,0.2)',
                         color: 'hsl(var(--text-secondary))',
@@ -280,15 +280,15 @@ const Portfolio = () => {
 
                   <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 mt-5 sm:mt-7">
                     <a href={p.liveUrl} target="_blank" rel="noopener noreferrer"
-                      className="font-body font-medium text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 hover:bg-[rgba(201,168,76,0.08)] text-center"
-                      style={{ border: '1.5px solid rgba(201,168,76,0.4)', color: '#C9A84C' }}
+                      className="btn-gold-outline px-4 sm:px-6 py-2 sm:py-3 text-sm flex-1"
+                      
                     >
                       View Live Site →
                     </a>
                     <button
                       onClick={() => setWhatsappOpen(true)}
-                      className="font-body font-medium text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 hover:-translate-y-0.5 text-center"
-                      style={{ background: 'linear-gradient(135deg, #957C3D, #C9A84C)', color: '#001020', boxShadow: '0 0 20px rgba(201,168,76,0.25)' }}
+                      className="btn-gold px-4 sm:px-6 py-2 sm:py-3 text-sm flex-1"
+                      
                     >
                       Want something like this?
                     </button>

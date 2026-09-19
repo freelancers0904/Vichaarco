@@ -65,10 +65,10 @@ const Solutions = () => {
               {/* Decorative glow */}
               <div className="absolute -top-10 -right-10 w-[140px] h-[140px] rounded-full pointer-events-none" style={{ background: s.glowColor, filter: 'blur(40px)' }} />
 
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.25)' }}>
+              <div className="w-12 h-12 rounded-item flex items-center justify-center" style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.25)' }}>
                 {s.icon}
               </div>
-              <div className="mt-5 inline-block px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-[1.5px] font-body" style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.2)', color: '#C9A84C' }}>
+              <div className="mt-5 inline-block px-2.5 py-1 rounded-full text-xs font-semibold tracking-[1.5px] font-body" style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.2)', color: '#C9A84C' }}>
                 {s.tag}
               </div>
               <h3 className="font-display font-semibold text-[22px] text-agency-text mt-3">{s.title}</h3>

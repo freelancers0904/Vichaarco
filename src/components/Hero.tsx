@@ -69,7 +69,7 @@ const Hero = () => {
           }}
         >
           <span className="w-1.5 h-1.5 rounded-full animate-pulse-dot" style={{ background: '#C9A84C' }} />
-          <span className="font-body font-medium text-[13px]" style={{ color: '#C9A84C' }}>⚡ Full Online Presence in 5–7 Days</span>
+          <span className="font-body font-medium text-sm" style={{ color: '#C9A84C' }}>⚡ Full Online Presence in 5–7 Days</span>
         </div>
 
         {/* Headline */}
@@ -88,7 +88,7 @@ const Hero = () => {
             style={{ transitionDelay: '0.6s', marginLeft: '0.9em', whiteSpace: 'nowrap' }}
           >
              <span className="text-shimmer-gold">A Customer Magnet.</span>
-            <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none">
+            <svg className="absolute -bottom-3 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none">
               <path
                 d="M2 8 C40 2, 80 12, 120 6 S180 2, 198 8"
                 stroke="#C9A84C"
@@ -123,12 +123,8 @@ const Hero = () => {
         >
           <MagneticButton
             onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-            className="font-body font-semibold text-[14px] sm:text-[15px] h-11 sm:h-[52px] px-6 sm:px-8 rounded-[10px] w-full sm:w-auto flex items-center justify-center gap-2"
-            style={{
-              background: 'linear-gradient(135deg, #957C3D, #C9A84C)',
-              color: '#001020',
-              boxShadow: '0 0 30px rgba(201,168,76,0.25)',
-            }}
+            className="btn-gold h-12 sm:h-[52px] px-6 sm:px-8 w-full sm:w-auto text-[15px]"
+            
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -138,7 +134,7 @@ const Hero = () => {
           </MagneticButton>
           <button
             onClick={() => setWhatsappOpen(true)}
-            className="font-body font-semibold text-[14px] sm:text-[15px] h-11 sm:h-[52px] px-6 sm:px-8 rounded-[10px] flex items-center justify-center transition-all duration-300 hover:bg-[rgba(201,168,76,0.08)] w-full sm:w-auto gap-2"
+            className="btn-gold-outline h-12 sm:h-[52px] px-6 sm:px-8 w-full sm:w-auto text-[15px]"
             style={{
               border: '1px solid rgba(201,168,76,0.3)',
               color: '#C9A84C',
@@ -152,7 +148,7 @@ const Hero = () => {
         </div>
 
         {/* Microcopy */}
-        <p className={`font-body text-[13px] text-agency-text-muted mt-5 transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        <p className={`font-body text-sm text-agency-text-muted mt-5 transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
           style={{ transitionDelay: '0.9s' }}
         >
           No retainer. No tech headaches. Just customers finding you.
