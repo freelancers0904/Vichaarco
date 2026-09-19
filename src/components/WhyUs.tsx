@@ -123,7 +123,7 @@ const WhyUs = () => {
               </svg>
             </span>
           </h2>
-          <p className="scroll-hidden font-body text-base text-agency-text-secondary leading-[1.8] mt-6 max-w-[460px] text-justify px-2">
+          <p className="scroll-hidden font-body text-base text-agency-text-secondary leading-[1.8] mt-6 max-w-[60ch] text-justify px-2">
             Most web agencies hand you a website and disappear. We are a focused 2-person team — Mahesh and Palak — that builds your complete digital presence and stays to grow it. Google Maps ranking, review systems, WhatsApp funnels, a converting website. No project managers. No delays. No excuses.
           </p>
           <div className="scroll-hidden mt-9 space-y-4">

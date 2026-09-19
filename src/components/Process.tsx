@@ -2,10 +2,10 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const steps = [
   { day: 'Day 1', title: 'Discovery Call', body: 'We learn your business and goals.' },
-  { day: 'Day 1–2', title: 'Strategy + Design Preview', body: 'Real mockup in 24–48 hours.' },
-  { day: 'Day 2–5', title: 'Full Build', body: 'Website, Google, WhatsApp — all built.' },
-  { day: 'Day 5–6', title: 'Review & Revisions', body: 'You review. We adjust.' },
-  { day: 'Day 7', title: '🚀 Launch', body: 'Live. Full access handed over.' },
+  { day: 'Days 1–2', title: 'Strategy + Design Preview', body: 'Real mockup in 24–48 hours.' },
+  { day: 'Days 2–5', title: 'Full Build', body: 'Website, Google, WhatsApp — all built.' },
+  { day: 'Days 5–6', title: 'Review & Revisions', body: 'You review. We adjust.' },
+  { day: 'Day 7', title: '<span role="img" aria-label="rocket">🚀</span> Launch', body: 'Live. Full access handed over.' },
 ];
 
 const Process = () => {

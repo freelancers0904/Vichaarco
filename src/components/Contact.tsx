@@ -92,11 +92,11 @@ const Contact = () => {
           <div className="scroll-hidden glass-card p-6 md:p-8 lg:p-10">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="text" placeholder="Full Name" required value={fullName} onChange={(e) => setFullName(e.target.value)} style={inputStyle}
+                <input type="text" aria-label="Full Name" placeholder="Full Name" required value={fullName} onChange={(e) => setFullName(e.target.value)} style={inputStyle}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
                 />
-                <select required value={businessType} onChange={(e) => setBusinessType(e.target.value)} style={{ ...inputStyle, appearance: 'none' as const }}
+                <select aria-label="Business Type" required value={businessType} onChange={(e) => setBusinessType(e.target.value)} style={{ ...inputStyle, appearance: 'none' as const }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
@@ -105,11 +105,11 @@ const Contact = () => {
                     <option key={o} value={o} style={{ background: 'hsl(var(--bg-secondary))', color: 'hsl(var(--text-primary))' }}>{o}</option>
                   ))}
                 </select>
-                <input type="email" placeholder="Email Address" required value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle}
+                <input type="email" aria-label="Email Address" placeholder="Email Address" required value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
                 />
-                <textarea placeholder="Tell us about your project" rows={5} required value={message} onChange={(e) => setMessage(e.target.value)} style={{ ...inputStyle, resize: 'vertical' as const }}
+                <textarea aria-label="Tell us about your project" placeholder="Tell us about your project" rows={5} required value={message} onChange={(e) => setMessage(e.target.value)} style={{ ...inputStyle, resize: 'vertical' as const }}
                   onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
                   onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
                 />

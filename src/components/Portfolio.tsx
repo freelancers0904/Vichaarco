@@ -77,7 +77,7 @@ const BrowserFrame = ({ url, src, title }: { url: string; src: string; title: st
 };
 
 const ScorePills = () => (
-  <div className="flex flex-wrap gap-1.5 mt-3">
+  <div className="flex flex-wrap gap-2.5 mt-4">
     <span className="score-pill"><span>98</span> Performance</span>
     <span className="score-pill"><span>100</span> SEO</span>
     <span className="score-pill"><span>100</span> Accessibility</span>
@@ -259,7 +259,7 @@ const Portfolio = () => {
                   <p className="font-body text-xs sm:text-sm text-agency-text-secondary mt-1">{p.location}</p>
                   <ScorePills />
 
-                  <div className="flex flex-wrap gap-2 mt-4 sm:mt-5">
+                  <div className="flex flex-wrap gap-3 mt-5">
                     {p.tags.map((tag) => (
                       <span key={tag} className="px-2 sm:px-3 py-1 rounded-full font-body text-[10px] sm:text-xs" style={{
                         background: 'hsla(var(--card-bg),0.35)',
