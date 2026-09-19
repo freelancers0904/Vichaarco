@@ -197,7 +197,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-28 md:py-32" style={{ background: 'hsl(var(--bg-primary))' }}>
       <div ref={sectionRef} className="max-w-[1100px] mx-auto px-6">
         <div className="text-center">
-          <span className="scroll-hidden section-label">OUR WORK</span>
+          <span className="scroll-hidden section-label mx-auto">OUR WORK</span>
           <h2 className="scroll-hidden font-display font-bold text-fluid-h2 text-center mt-6 text-agency-text" style={{ wordSpacing: '0.04em' }}>
             Built by us.<br />Ready to inspire you.
           </h2>
@@ -223,7 +223,7 @@ const Portfolio = () => {
                           background: 'linear-gradient(135deg, #957C3D, #C9A84C)',
                           color: '#001020',
                           border: '1.5px solid transparent',
-                          boxShadow: '0 0 20px rgba(201,168,76,0.3)',
+                          boxShadow: '0 4px 12px rgba(201,168,76,0.2)',
                         }
                       : {
                           background: 'hsla(var(--card-bg), 0.35)',
@@ -272,7 +272,7 @@ const Portfolio = () => {
                     ))}
                   </div>
 
-                  <p className="font-body text-[13px] sm:text-[15px] text-agency-text-secondary leading-[1.7] mt-4 sm:mt-5 text-justify">{p.desc}</p>
+                  <p className="font-body text-[13px] sm:text-[15px] text-agency-text-secondary leading-[1.7] mt-4 sm:mt-5 text-left">{p.desc}</p>
 
                   <p className="font-body text-[13px] sm:text-[15px] text-agency-text-secondary leading-[1.7] mt-2">
                     <strong>Best for:</strong> {p.bestFor}
