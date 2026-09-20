@@ -92,27 +92,39 @@ const Contact = () => {
           <div className="scroll-hidden glass-card p-6 md:p-8 lg:p-10">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="text" aria-label="Full Name" placeholder="Full Name" required value={fullName} onChange={(e) => setFullName(e.target.value)} style={inputStyle}
-                  onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
-                />
-                <select aria-label="Business Type" required value={businessType} onChange={(e) => setBusinessType(e.target.value)} style={{ ...inputStyle, appearance: 'none' as const }}
-                  onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
-                >
-                  <option value="" style={{ background: 'hsl(var(--bg-secondary))', color: 'hsl(var(--text-primary))' }}>Business Type</option>
-                  {['Interior Designer','Gym', 'Fitness Center', 'Coaching Business', 'Local Service', 'Restaurant', 'Other'].map((o) => (
-                    <option key={o} value={o} style={{ background: 'hsl(var(--bg-secondary))', color: 'hsl(var(--text-primary))' }}>{o}</option>
-                  ))}
-                </select>
-                <input type="email" aria-label="Email Address" placeholder="Email Address" required value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle}
-                  onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
-                />
-                <textarea aria-label="Tell us about your project" placeholder="Tell us about your project" rows={5} required value={message} onChange={(e) => setMessage(e.target.value)} style={{ ...inputStyle, resize: 'vertical' as const }}
-                  onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
-                />
+                <div>
+                  <label htmlFor="contact-name" className="block font-body text-xs font-medium mb-1.5 text-agency-text-secondary">Full Name</label>
+                  <input id="contact-name" name="name" autoComplete="name" type="text" placeholder="e.g. Rahul Sharma" required value={fullName} onChange={(e) => setFullName(e.target.value)} style={inputStyle}
+                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
+                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="contact-business" className="block font-body text-xs font-medium mb-1.5 text-agency-text-secondary">Business Type</label>
+                  <select id="contact-business" name="businessType" required value={businessType} onChange={(e) => setBusinessType(e.target.value)} style={{ ...inputStyle, appearance: 'none' as const }}
+                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
+                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
+                  >
+                    <option value="" style={{ background: 'hsl(var(--bg-secondary))', color: 'hsl(var(--text-primary))' }}>Select your business type</option>
+                    {['Interior Designer','Gym', 'Fitness Center', 'Coaching Business', 'Local Service', 'Restaurant', 'Other'].map((o) => (
+                      <option key={o} value={o} style={{ background: 'hsl(var(--bg-secondary))', color: 'hsl(var(--text-primary))' }}>{o}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="contact-email" className="block font-body text-xs font-medium mb-1.5 text-agency-text-secondary">Email Address</label>
+                  <input id="contact-email" name="email" autoComplete="email" type="email" placeholder="you@example.com" required value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle}
+                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
+                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="contact-message" className="block font-body text-xs font-medium mb-1.5 text-agency-text-secondary">Tell us about your project</label>
+                  <textarea id="contact-message" name="message" placeholder="What do you need help with?" rows={5} required value={message} onChange={(e) => setMessage(e.target.value)} style={{ ...inputStyle, resize: 'vertical' as const }}
+                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
+                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
+                  />
+                </div>
                 {submitError && (
                   <p className="font-body text-sm rounded-lg px-3 py-2" style={{ background: 'rgba(220,38,38,0.12)', color: '#fecaca', border: '1px solid rgba(220,38,38,0.35)' }}>
                     {submitError}

@@ -71,8 +71,7 @@ const Footer = () => {
           <div className="text-center sm:text-left">
             <p className="font-body font-medium text-[10px] md:text-[11px] tracking-[1.5px] text-agency-text-muted uppercase mb-4">Get in touch</p>
             <button onClick={() => setWhatsappOpen(true)}
-              className="inline-block w-full sm:w-auto px-3 md:px-4 py-2 rounded-lg font-body text-xs md:text-[13px] font-medium mb-3 transition-all duration-300"
-              style={{ border: '1.5px solid rgba(201,168,76,0.4)', color: '#C9A84C' }}
+              className="btn-gold-outline w-full sm:w-auto px-4 text-xs md:text-[13px] mb-3"
             >
               Chat on WhatsApp →
             </button>

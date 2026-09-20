@@ -718,3 +718,64 @@ a:active {
 #faq .grid p {
   max-width: 60ch;
 }
+
+/* ============================================================
+   Unified radii + button system (audit issues 2 & 3)
+   ============================================================ */
+.rounded-card {
+  border-radius: 24px;
+}
+.rounded-item {
+  border-radius: 16px;
+}
+
+.btn-gold,
+.btn-gold-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #957c3d, #c9a84c);
+  color: #001020;
+  border: 1.5px solid transparent;
+  box-shadow: 0 10px 30px rgba(201, 168, 76, 0.2);
+}
+.btn-gold:hover {
+  box-shadow: 0 14px 34px rgba(201, 168, 76, 0.38);
+  transform: translateY(-1px);
+}
+
+.btn-gold-outline {
+  background: transparent;
+  color: #c9a84c;
+  border: 1.5px solid rgba(201, 168, 76, 0.5);
+}
+.btn-gold-outline:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: #c9a84c;
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-gold:hover,
+  .btn-gold-outline:hover {
+    transform: none;
+  }
+}

@@ -216,14 +216,14 @@ const Portfolio = () => {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
+                  aria-pressed={active}
                   className="font-body font-medium text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300"
                   style={
                     active
                       ? {
-                          background: 'linear-gradient(135deg, #957C3D, #C9A84C)',
-                          color: '#001020',
-                          border: '1.5px solid transparent',
-                          boxShadow: '0 4px 12px rgba(201,168,76,0.2)',
+                          background: 'hsla(var(--card-bg), 0.65)',
+                          color: '#C9A84C',
+                          border: '1.5px solid #C9A84C',
                         }
                       : {
                           background: 'hsla(var(--card-bg), 0.35)',
@@ -260,7 +260,7 @@ const Portfolio = () => {
                   <ScorePills />
 
                   <div className="flex flex-wrap gap-3 mt-5">
-                    {p.tags.map((tag) => (
+                    {p.tags.slice(0, 4).map((tag) => (
                       <span key={tag} className="px-2 sm:px-3 py-1 rounded-full font-body text-xs" style={{
                         background: 'hsla(var(--card-bg),0.35)',
                         border: '1px solid rgba(149,124,61,0.2)',

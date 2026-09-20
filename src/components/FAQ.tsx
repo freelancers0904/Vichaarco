@@ -59,6 +59,15 @@ const FAQ = () => {
               <p className="font-body text-sm sm:text-base text-agency-text-secondary leading-[1.8] mt-2 text-left">
                 {faq.answer}
               </p>
+              {index === faqs.length - 1 && (
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-1 mt-4 font-body font-semibold text-sm"
+                  style={{ color: '#C9A84C' }}
+                >
+                  Contact Us →
+                </a>
+              )}
             </div>
           ))}
         </div>
