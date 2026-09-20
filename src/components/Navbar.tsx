@@ -47,6 +47,11 @@ const Navbar = () => {
       const y = window.scrollY;
       setScrolled(y > 60);
 
+      if (y < 120) {
+        setActiveSection('');
+        return;
+      }
+
       const sections = navLinks.map(l => l.href.slice(1));
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -56,6 +61,7 @@ const Navbar = () => {
         }
       }
     };
+    update();
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
     };
