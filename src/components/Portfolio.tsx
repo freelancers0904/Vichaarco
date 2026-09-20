@@ -260,7 +260,7 @@ const Portfolio = () => {
                   <ScorePills />
 
                   <div className="flex flex-wrap gap-3 mt-5">
-                    {p.tags.map((tag) => (
+                    {p.tags.slice(0, 4).map((tag) => (
                       <span key={tag} className="px-2 sm:px-3 py-1 rounded-full font-body text-xs" style={{
                         background: 'hsla(var(--card-bg),0.35)',
                         border: '1px solid rgba(149,124,61,0.2)',
