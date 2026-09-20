@@ -120,6 +120,7 @@ const Navbar = () => {
               <button
                 key={link.href}
                 onClick={() => handleClick(link.href)}
+                aria-current={activeSection === link.href.slice(1) ? 'true' : undefined}
                 className="font-body font-medium text-sm transition-colors duration-200"
                 style={{
                   color: activeSection === link.href.slice(1) ? '#C9A84C' : (isLight ? '#5A6A7A' : '#8A9BB5'),
@@ -162,23 +163,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setWhatsappOpen(true)}
-              className="hidden md:block font-body font-medium text-sm px-5 py-2.5 rounded-lg transition-all duration-300"
-              style={{
-                border: '1.5px solid rgba(201,168,76,0.5)',
-                color: '#C9A84C',
-              }}
-              onMouseEnter={(e) => {
-                const t = e.currentTarget;
-                t.style.background = 'linear-gradient(135deg, #957C3D, #C9A84C)';
-                t.style.color = '#001020';
-                t.style.boxShadow = '0 0 20px rgba(201,168,76,0.4)';
-              }}
-              onMouseLeave={(e) => {
-                const t = e.currentTarget;
-                t.style.background = 'transparent';
-                t.style.color = '#C9A84C';
-                t.style.boxShadow = 'none';
-              }}
+              className="btn-gold-outline hidden md:inline-flex text-sm px-5"
             >
               Chat on WhatsApp →
             </button>
