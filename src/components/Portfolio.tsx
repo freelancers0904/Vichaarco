@@ -278,16 +278,16 @@ const Portfolio = () => {
                     <strong>Best for:</strong> {p.bestFor}
                   </p>
 
-                  <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 mt-5 sm:mt-7">
+                  <div className="flex flex-col sm:flex-row flex-wrap items-stretch gap-2 sm:gap-3 mt-5 sm:mt-7">
                     <a href={p.liveUrl} target="_blank" rel="noopener noreferrer"
-                      className="btn-gold-outline px-4 sm:px-6 py-2 sm:py-3 text-sm flex-1"
+                      className="btn-gold-outline px-4 sm:px-5 py-2 sm:py-3 text-sm flex-1 whitespace-nowrap inline-flex items-center justify-center"
                       
                     >
                       View Live Site →
                     </a>
                     <button
                       onClick={() => setWhatsappOpen(true)}
-                      className="btn-gold px-4 sm:px-6 py-2 sm:py-3 text-sm flex-1"
+                      className="btn-gold px-4 sm:px-5 py-2 sm:py-3 text-sm flex-1 whitespace-nowrap inline-flex items-center justify-center"
                       
                     >
                       Want something like this?

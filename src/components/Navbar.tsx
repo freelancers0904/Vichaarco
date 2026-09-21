@@ -99,7 +99,7 @@ const Navbar = () => {
               src={vichaarLogo}
               alt="Vichaar Co"
               decoding="sync"
-              fetchPriority="high"
+              {...{ fetchpriority: 'high' }}
               className="h-14 md:h-16 w-auto block transition-opacity duration-75"
               style={{ opacity: isLight ? 0 : 1 }}
             />
@@ -108,7 +108,7 @@ const Navbar = () => {
               alt=""
               aria-hidden="true"
               decoding="sync"
-              fetchPriority="high"
+              {...{ fetchpriority: 'high' }}
               className="h-14 md:h-16 w-auto block absolute inset-0 transition-opacity duration-75"
               style={{ opacity: isLight ? 1 : 0 }}
             />
