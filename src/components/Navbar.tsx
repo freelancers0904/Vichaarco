@@ -163,7 +163,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setWhatsappOpen(true)}
-              className="btn-gold-outline hidden md:inline-flex text-sm px-5"
+              className="btn-gold-outline desktop-whatsapp-cta text-sm px-5"
             >
               Chat on WhatsApp →
             </button>

@@ -4,13 +4,14 @@ import { CONTACT_EMAIL } from '@/config/contact';
 import { submitContactForm } from '@/lib/submitContactForm';
 import WhatsAppSelector from './WhatsAppSelector';
 
-function buildContactEnquiry(fullName: string, businessType: string, email: string, message: string) {
+function buildContactEnquiry(fullName: string, businessType: string, email: string, phone: string, message: string) {
   return [
     "Hi — I'm contacting you through your portfolio site's contact form.",
     '',
     `Name: ${fullName}`,
     `Business type: ${businessType}`,
     `Email: ${email}`,
+    `Contact number: ${phone}`,
     '',
     'Project / message:',
     message,
@@ -38,9 +39,11 @@ const Contact = () => {
   const [fullName, setFullName] = useState('');
   const [businessType, setBusinessType] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [emailDelivered, setEmailDelivered] = useState(false);
 
   const openWhatsAppPicker = () => {
     setWaPrefill(null);
@@ -50,16 +53,28 @@ const Contact = () => {
   const closeWhatsAppPicker = () => {
     setWhatsappOpen(false);
     setWaPrefill(null);
+    if (emailDelivered) {
+      setSubmitted(true);
+      setEmailDelivered(false);
+    }
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
-    const bodyText = buildContactEnquiry(fullName, businessType, email, message);
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+      setSubmitError('Enter a valid contact number with 7 to 15 digits.');
+      return;
+    }
+
+    const bodyText = buildContactEnquiry(fullName, businessType, email, phone, message);
     setSubmitting(true);
     try {
-      await submitContactForm({ fullName, businessType, email, message, bodyText });
-      setSubmitted(true);
+      await submitContactForm({ fullName, businessType, email, phone, message, bodyText });
+      setEmailDelivered(true);
+      setWaPrefill(bodyText);
+      setWhatsappOpen(true);
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Something went wrong.';
       setSubmitError(msg);
@@ -72,6 +87,7 @@ const Contact = () => {
 
   const handleSendChoice = () => {
     setSubmitted(true);
+    setEmailDelivered(false);
   };
 
   return (
@@ -114,6 +130,13 @@ const Contact = () => {
                 <div>
                   <label htmlFor="contact-email" className="block font-body text-xs font-medium mb-1.5 text-agency-text-secondary">Email Address</label>
                   <input id="contact-email" name="email" autoComplete="email" type="email" placeholder="you@example.com" required value={email} onChange={(e) => setEmail(e.target.value)} style={inputStyle}
+                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
+                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="contact-phone" className="block font-body text-xs font-medium mb-1.5 text-agency-text-secondary">Contact Number</label>
+                  <input id="contact-phone" name="phone" autoComplete="tel" inputMode="tel" type="tel" placeholder="e.g. +91 98765 43210" required minLength={7} maxLength={20} pattern="[0-9+() -]{7,20}" value={phone} onChange={(e) => setPhone(e.target.value)} style={inputStyle}
                     onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(201,168,76,0.1)'; }}
                     onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(149,124,61,0.2)'; e.currentTarget.style.boxShadow = 'none'; }}
                   />
