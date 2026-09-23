@@ -22,8 +22,9 @@ const WhatsAppSelector = ({
     { name: 'Palak', phone: '918660121462', emoji: '👩‍💼' },
   ];
 
-  const hasPrefill = Boolean(prefilledMessage?.trim());
-  const encodedPrefill = hasPrefill ? encodeURIComponent(prefilledMessage!.trim()) : '';
+  const trimmedPrefill = prefilledMessage?.trim() ?? '';
+  const hasPrefill = trimmedPrefill.length > 0;
+  const encodedPrefill = hasPrefill ? encodeURIComponent(trimmedPrefill) : '';
   const mailtoHref = hasPrefill
     ? `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('New enquiry — portfolio contact form')}&body=${encodedPrefill}`
     : `mailto:${CONTACT_EMAIL}`;

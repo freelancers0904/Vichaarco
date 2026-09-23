@@ -209,7 +209,7 @@ const Portfolio = () => {
 
         {/* Sticky Category Tabs */}
         <div className="portfolio-tabs-sticky">
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="grid grid-cols-2 justify-center gap-2 sm:gap-3 md:flex md:flex-wrap">
             {categories.map((cat) => {
               const active = activeCategory === cat.id;
               return (
@@ -217,7 +217,7 @@ const Portfolio = () => {
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
                   aria-pressed={active}
-                  className="font-body font-medium text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300"
+                  className="w-full md:w-auto font-body font-medium text-xs sm:text-sm px-3 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300"
                   style={
                     active
                       ? {

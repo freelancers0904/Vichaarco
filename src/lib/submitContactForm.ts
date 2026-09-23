@@ -4,6 +4,7 @@ export type ContactPayload = {
   fullName: string;
   businessType: string;
   email: string;
+  phone: string;
   message: string;
   bodyText: string;
 };
@@ -24,6 +25,7 @@ export async function submitContactForm(payload: ContactPayload): Promise<void> 
         subject: `Portfolio contact: ${payload.fullName} — ${payload.businessType}`,
         name: payload.fullName,
         email: payload.email,
+        phone: payload.phone,
         message: payload.bodyText,
         from_name: 'Portfolio contact form',
         business_type: payload.businessType,
@@ -44,6 +46,7 @@ export async function submitContactForm(payload: ContactPayload): Promise<void> 
       body: JSON.stringify({
         name: payload.fullName,
         email: payload.email,
+        phone: payload.phone,
         _subject: `Portfolio contact: ${payload.fullName} (${payload.businessType})`,
         message: payload.bodyText,
         _template: 'table',
