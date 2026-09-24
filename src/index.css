@@ -650,6 +650,11 @@ body {
   background: transparent;
 }
 
+.portfolio-tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (min-width: 768px) {
   .portfolio-tabs-sticky {
     position: sticky;
@@ -660,6 +665,10 @@ body {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 999px;
+  }
+
+  .portfolio-tabs-grid {
+    display: flex;
   }
 }
 
@@ -783,12 +792,12 @@ a:active {
 
 /* Keep the header CTA off phones even when global touch-target rules set buttons to flex. */
 .desktop-whatsapp-cta {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 768px) {
   .desktop-whatsapp-cta {
-    display: inline-flex;
+    display: inline-flex !important;
   }
 }
 
