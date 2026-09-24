@@ -783,12 +783,12 @@ a:active {
 
 /* Keep the header CTA off phones even when global touch-target rules set buttons to flex. */
 .desktop-whatsapp-cta {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 768px) {
   .desktop-whatsapp-cta {
-    display: inline-flex;
+    display: inline-flex !important;
   }
 }
 
