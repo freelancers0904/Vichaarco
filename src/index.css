@@ -650,6 +650,11 @@ body {
   background: transparent;
 }
 
+.portfolio-tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (min-width: 768px) {
   .portfolio-tabs-sticky {
     position: sticky;
@@ -660,6 +665,10 @@ body {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 999px;
+  }
+
+  .portfolio-tabs-grid {
+    display: flex;
   }
 }
 

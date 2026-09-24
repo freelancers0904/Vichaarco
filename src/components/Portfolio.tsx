@@ -209,7 +209,7 @@ const Portfolio = () => {
 
         {/* Sticky Category Tabs */}
         <div className="portfolio-tabs-sticky">
-          <div className="grid grid-cols-2 justify-center gap-2 sm:gap-3 md:flex md:flex-wrap">
+          <div className="portfolio-tabs-grid justify-center gap-2 sm:gap-3 md:flex md:flex-wrap">
             {categories.map((cat) => {
               const active = activeCategory === cat.id;
               return (
